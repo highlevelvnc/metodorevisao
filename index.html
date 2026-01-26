@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método Revisão | Aulas Particulares de Português Online</title>
+    <meta name="description" content="Aulas particulares de português online para alunos do 6º ano ao Ensino Médio. Metodologia comprovada, professores especializados e resultados garantidos.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .font-display {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        /* Custom Colors - Purple & Yellow */
+        :root {
+            --purple-light: #a78bfa;
+            --purple-medium: #8b5cf6;
+            --purple-dark: #6d28d9;
+            --yellow-light: #fbbf24;
+            --yellow-medium: #f59e0b;
+            --yellow-dark: #d97706;
+        }
+        
+        .bg-purple-gradient {
+            background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+        }
+        
+        .bg-yellow-gradient {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+        }
+        
+        .text-purple {
+            color: #8b5cf6;
+        }
+        
+        .text-yellow {
+            color: #fbbf24;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+            }
+            50% {
+                box-shadow: 0 0 40px rgba(139, 92, 246, 0.6);
+            }
+        }
+        
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .animate-pulse-glow {
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+        
+        /* Hero Pattern */
+        .hero-pattern {
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(251, 191, 36, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
+        }
+        
+        /* Blob Background */
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(40px);
+            opacity: 0.5;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .blob-purple {
+            background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%);
+        }
+        
+        .blob-yellow {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+        }
+        
+        /* Card Hover Effect */
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(139, 92, 246, 0.2);
+        }
+        
+        /* Glassmorphism */
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Image Overlay Effect */
+        .image-overlay {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .image-overlay::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.3) 0%, rgba(251, 191, 36, 0.3) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .image-overlay:hover::after {
+            opacity: 1;
+        }
+        
+        /* Scroll Reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease;
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        purple: {
+                            light: '#a78bfa',
+                            DEFAULT: '#8b5cf6',
+                            dark: '#6d28d9',
+                        },
+                        yellow: {
+                            light: '#fbbf24',
+                            DEFAULT: '#f59e0b',
+                            dark: '#d97706',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav id="mainNav" class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#home" class="flex items-center space-x-3 group">
+                    <div class="relative w-12 h-12 bg-purple-gradient rounded-xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300 animate-pulse-glow">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-2xl font-bold text-gray-900 font-display">Método Revisão</span>
+                        <span class="text-xs text-purple font-semibold -mt-1">Português de Alto Nível</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-1">
+                    <a href="#home" class="px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 hover:bg-purple-50 hover:text-purple transition-all duration-200">Início</a>
+                    <a href="#curso" class="px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 hover:bg-purple-50 hover:text-purple transition-all duration-200">Curso</a>
+                    <a href="#metodologia" class="px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 hover:bg-purple-50 hover:text-purple transition-all duration-200">Metodologia</a>
+                    <a href="#pais" class="px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 hover:bg-purple-50 hover:text-purple transition-all duration-200">Para Pais</a>
+                    <a href="#depoimentos" class="px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 hover:bg-purple-50 hover:text-purple transition-all duration-200">Depoimentos</a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden lg:block">
+                    <a href="#contato" class="relative px-6 py-3 bg-yellow-gradient text-gray-900 font-bold rounded-xl hover:shadow-xl transform hover:scale-105 transition-all duration-300 overflow-hidden group">
+                        <span class="relative z-10">Aula Grátis 🎓</span>
+                        <div class="absolute inset-0 bg-gradient-to-r from-yellow-400 to-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg hover:bg-purple-50">
+                    <svg class="w-6 h-6 text-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-purple-100 shadow-xl">
+            <div class="px-4 py-6 space-y-3">
+                <a href="#home" class="block px-4 py-3 rounded-lg text-base font-semibold text-gray-700 hover:bg-purple-50 hover:text-purple">Início</a>
+                <a href="#curso" class="block px-4 py-3 rounded-lg text-base font-semibold text-gray-700 hover:bg-purple-50 hover:text-purple">Curso</a>
+                <a href="#metodologia" class="block px-4 py-3 rounded-lg text-base font-semibold text-gray-700 hover:bg-purple-50 hover:text-purple">Metodologia</a>
+                <a href="#pais" class="block px-4 py-3 rounded-lg text-base font-semibold text-gray-700 hover:bg-purple-50 hover:text-purple">Para Pais</a>
+                <a href="#depoimentos" class="block px-4 py-3 rounded-lg text-base font-semibold text-gray-700 hover:bg-purple-50 hover:text-purple">Depoimentos</a>
+                <a href="#contato" class="block px-6 py-3 bg-yellow-gradient text-gray-900 font-bold rounded-xl mt-4 text-center shadow-lg">Aula Experimental Grátis 🎓</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5522992682207?text=Olá! Gostaria de agendar uma aula experimental de português." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 w-16 h-16 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-200 z-50 animate-pulse-glow">
+        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+        <span class="absolute -top-1 -right-1 w-5 h-5 bg-yellow text-gray-900 rounded-full flex items-center justify-center text-xs font-bold">!</span>
+    </a>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center overflow-hidden pt-20">
+        <!-- Animated Background Blobs -->
+        <div class="blob blob-purple w-96 h-96 top-10 -left-48" style="animation-delay: 0s;"></div>
+        <div class="blob blob-yellow w-96 h-96 bottom-10 -right-48" style="animation-delay: 2s;"></div>
+        <div class="blob blob-purple w-64 h-64 top-1/2 left-1/2" style="animation-delay: 4s;"></div>
+        
+        <div class="hero-pattern absolute inset-0"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="space-y-8 animate-fadeInUp">
+                    <div class="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-100 to-yellow-100 border-2 border-purple-200 rounded-full">
+                        <span class="text-2xl">🏆</span>
+                        <span class="text-purple-dark font-bold text-sm">Método Comprovado por +500 Alunos</span>
+                    </div>
+                    
+                    <h1 class="text-5xl lg:text-7xl font-black leading-tight">
+                        <span class="text-gray-900 font-display">Seu Filho</span>
+                        <span class="block bg-gradient-to-r from-purple to-purple-dark bg-clip-text text-transparent font-display">Dominando Português</span>
+                        <span class="block text-yellow font-display">com Confiança!</span>
+                    </h1>
+                    
+                    <p class="text-xl text-gray-700 leading-relaxed font-medium">
+                        Aulas particulares online <span class="text-purple font-bold">100% personalizadas</span> para alunos do 6º ano ao Ensino Médio. 
+                        <span class="bg-yellow-100 px-2 py-1 rounded">Resultados reais em 60 dias</span> ou seu dinheiro de volta!
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a href="#contato" class="group relative px-8 py-5 bg-yellow-gradient text-gray-900 font-bold text-lg rounded-2xl transition-all duration-300 flex items-center justify-center space-x-2 shadow-2xl hover:shadow-yellow/50 transform hover:scale-105 overflow-hidden">
+                            <span class="relative z-10 flex items-center space-x-2">
+                                <span>Quero Minha Aula Grátis</span>
+                                <svg class="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                </svg>
+                            </span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-yellow-300 to-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </a>
+                        
+                        <a href="#metodologia" class="px-8 py-5 bg-white border-2 border-purple text-purple font-bold text-lg rounded-2xl transition-all duration-300 flex items-center justify-center space-x-2 hover:bg-purple hover:text-white">
+                            <span>Como Funciona</span>
+                        </a>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-6 pt-8 border-t-2 border-purple-100">
+                        <div class="text-center">
+                            <div class="text-4xl font-black text-purple">500+</div>
+                            <div class="text-sm text-gray-600 font-semibold">Alunos Atendidos</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-black text-yellow">94%</div>
+                            <div class="text-sm text-gray-600 font-semibold">Taxa de Aprovação</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-black text-purple">4.9★</div>
+                            <div class="text-sm text-gray-600 font-semibold">Avaliação Média</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Image -->
+                <div class="relative hidden lg:block animate-float">
+                    <div class="relative w-full h-[600px] rounded-3xl overflow-hidden shadow-2xl">
+                        <!-- Main Image with gradient overlay -->
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80" 
+                             alt="Estudante feliz estudando online" 
+                             class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-purple/40 via-transparent to-yellow/40"></div>
+                        
+                        <!-- Floating Cards -->
+                        <div class="absolute top-8 right-8 bg-white rounded-2xl p-4 shadow-xl transform hover:scale-105 transition-transform">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                                    <span class="text-2xl">✅</span>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-gray-900">Nota 9.5</div>
+                                    <div class="text-sm text-gray-600">Lucas, 7º ano</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="absolute bottom-8 left-8 bg-white rounded-2xl p-4 shadow-xl transform hover:scale-105 transition-transform">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
+                                    <span class="text-2xl">🎯</span>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-gray-900">+2.5 pontos</div>
+                                    <div class="text-sm text-gray-600">Média em 3 meses</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problema Section -->
+    <section id="problemas" class="py-24 bg-gradient-to-b from-white to-purple-50 reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="inline-block px-4 py-2 bg-yellow-100 text-yellow-dark rounded-full text-sm font-bold mb-4">😰 Você Não Está Sozinho(a)</span>
+                <h2 class="text-4xl lg:text-5xl font-black text-gray-900 mb-6 font-display">
+                    Reconhece Alguma Dessas <span class="text-purple">Situações?</span>
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Sabemos o quanto é frustrante ver seu filho lutando com Português.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="group relative bg-white p-8 rounded-3xl border-2 border-purple-100 hover:border-purple shadow-lg card-hover">
+                    <div class="absolute -top-6 -right-6 w-20 h-20 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full flex items-center justify-center text-4xl transform group-hover:scale-110 transition-transform">
+                        📉
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3 pt-6">Notas Baixas Persistentes</h3>
+                    <p class="text-gray-600 leading-relaxed">Seu filho estuda, mas as notas não melhoram. A frustração aumenta a cada boletim.</p>
+                    <div class="mt-4 h-1 w-16 bg-yellow-gradient rounded-full"></div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group relative bg-white p-8 rounded-3xl border-2 border-purple-100 hover:border-purple shadow-lg card-hover">
+                    <div class="absolute -top-6 -right-6 w-20 h-20 bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-full flex items-center justify-center text-4xl transform group-hover:scale-110 transition-transform">
+                        📖
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3 pt-6">Dificuldade em Interpretar</h3>
+                    <p class="text-gray-600 leading-relaxed">Lê o texto várias vezes mas não consegue responder. Afeta outras matérias também.</p>
+                    <div class="mt-4 h-1 w-16 bg-yellow-gradient rounded-full"></div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group relative bg-white p-8 rounded-3xl border-2 border-purple-100 hover:border-purple shadow-lg card-hover">
+                    <div class="absolute -top-6 -right-6 w-20 h-20 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full flex items-center justify-center text-4xl transform group-hover:scale-110 transition-transform">
+                        ✍️
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3 pt-6">Redações Fracas</h3>
+                    <p class="text-gray-600 leading-relaxed">Textos curtos, desorganizados, com erros básicos. A escrita não evolui.</p>
+                    <div class="mt-4 h-1 w-16 bg-yellow-gradient rounded-full"></div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group relative bg-white p-8 rounded-3xl border-2 border-purple-100 hover:border-purple shadow-lg card-hover">
+                    <div class="absolute -top-6 -right-6 w-20 h-20 bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-full flex items-center justify-center text-4xl transform group-hover:scale-110 transition-transform">
+                        😰
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3 pt-6">Ansiedade e Medo</h3>
+                    <p class="text-gray-600 leading-relaxed">Evita fazer lição, fica nervoso antes das provas, perdeu a confiança.</p>
+                    <div class="mt-4 h-1 w-16 bg-yellow-gradient rounded-full"></div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="group relative bg-white p-8 rounded-3xl border-2 border-purple-100 hover:border-purple shadow-lg card-hover">
+                    <div class="absolute -top-6 -right-6 w-20 h-20 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full flex items-center justify-center text-4xl transform group-hover:scale-110 transition-transform">
+                        🕐
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3 pt-6">Demora Excessiva</h3>
+                    <p class="text-gray-600 leading-relaxed">Passa horas na lição mas avança pouco. A rotina familiar fica comprometida.</p>
+                    <div class="mt-4 h-1 w-16 bg-yellow-gradient rounded-full"></div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="group relative bg-white p-8 rounded-3xl border-2 border-purple-100 hover:border-purple shadow-lg card-hover">
+                    <div class="absolute -top-6 -right-6 w-20 h-20 bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-full flex items-center justify-center text-4xl transform group-hover:scale-110 transition-transform">
+                        🎯
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3 pt-6">Risco de Reprovação</h3>
+                    <p class="text-gray-600 leading-relaxed">A possibilidade de reprovar em português preocupa toda a família.</p>
+                    <div class="mt-4 h-1 w-16 bg-yellow-gradient rounded-full"></div>
+                </div>
+            </div>
+
+            <!-- CTA Box -->
+            <div class="mt-20 relative overflow-hidden bg-gradient-to-r from-purple via-purple-dark to-purple rounded-3xl p-12 text-center shadow-2xl">
+                <div class="absolute inset-0 opacity-10">
+                    <div class="absolute top-0 left-0 w-72 h-72 bg-yellow rounded-full filter blur-3xl"></div>
+                    <div class="absolute bottom-0 right-0 w-72 h-72 bg-purple-light rounded-full filter blur-3xl"></div>
+                </div>
+                <div class="relative z-10">
+                    <p class="text-3xl text-white font-bold mb-6">
+                        <span class="text-5xl">💡</span> A boa notícia: 
+                        <span class="text-yellow">todas essas dificuldades têm solução!</span>
+                    </p>
+                    <a href="#curso" class="inline-flex items-center space-x-2 px-8 py-4 bg-yellow-gradient text-gray-900 font-bold text-lg rounded-xl hover:shadow-2xl transform hover:scale-105 transition-all">
+                        <span>Veja Como Ajudamos</span>
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metodologia Section -->
+    <section id="metodologia" class="py-24 bg-white reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Image Side -->
+                <div class="relative">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl image-overlay">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80" 
+                             alt="Aula online de português" 
+                             class="w-full h-[500px] object-cover">
+                    </div>
+                    <!-- Floating Stats -->
+                    <div class="absolute -bottom-8 -right-8 bg-white rounded-2xl p-6 shadow-2xl border-2 border-purple-100">
+                        <div class="text-center">
+                            <div class="text-4xl font-black bg-gradient-to-r from-purple to-purple-dark bg-clip-text text-transparent">8 Anos</div>
+                            <div class="text-sm text-gray-600 font-semibold">de Experiência</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Side -->
+                <div class="space-y-6">
+                    <span class="inline-block px-4 py-2 bg-purple-100 text-purple rounded-full text-sm font-bold">✨ Nossa Solução</span>
+                    
+                    <h2 class="text-4xl lg:text-5xl font-black text-gray-900 font-display">
+                        Método Revisão: <span class="text-purple">Muito Além</span> de Aulas Particulares
+                    </h2>
+                    
+                    <p class="text-xl text-gray-700 leading-relaxed">
+                        Somos especialistas em <span class="font-bold text-purple">transformar dificuldades em português</span> através de uma metodologia exclusiva que realmente funciona.
+                    </p>
+
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-start space-x-4 p-4 bg-purple-50 rounded-2xl hover:bg-purple-100 transition-colors">
+                            <div class="flex-shrink-0 w-12 h-12 bg-purple-gradient rounded-xl flex items-center justify-center">
+                                <span class="text-2xl">🎯</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">Diagnóstico Personalizado</h4>
+                                <p class="text-gray-600">Identificamos exatamente onde estão as lacunas de aprendizado</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 p-4 bg-yellow-50 rounded-2xl hover:bg-yellow-100 transition-colors">
+                            <div class="flex-shrink-0 w-12 h-12 bg-yellow-gradient rounded-xl flex items-center justify-center">
+                                <span class="text-2xl">📚</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">Plano Individualizado</h4>
+                                <p class="text-gray-600">Cada aluno tem seu próprio plano de estudos focado nas necessidades</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 p-4 bg-purple-50 rounded-2xl hover:bg-purple-100 transition-colors">
+                            <div class="flex-shrink-0 w-12 h-12 bg-purple-gradient rounded-xl flex items-center justify-center">
+                                <span class="text-2xl">👨‍🏫</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">Professores Especializados</h4>
+                                <p class="text-gray-600">Equipe treinada em dificuldades de aprendizagem</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 p-4 bg-yellow-50 rounded-2xl hover:bg-yellow-100 transition-colors">
+                            <div class="flex-shrink-0 w-12 h-12 bg-yellow-gradient rounded-xl flex items-center justify-center">
+                                <span class="text-2xl">📊</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">Resultados Mensuráveis</h4>
+                                <p class="text-gray-600">Acompanhamento semanal com relatórios de evolução</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#contato" class="inline-flex items-center space-x-2 px-8 py-4 bg-purple-gradient text-white font-bold text-lg rounded-xl hover:shadow-2xl transform hover:scale-105 transition-all mt-8">
+                        <span>Quero Conhecer o Método</span>
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos Section -->
+    <section id="depoimentos" class="py-24 bg-gradient-to-b from-purple-50 to-white reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-2 bg-yellow-100 text-yellow-dark rounded-full text-sm font-bold mb-4">⭐ Resultados Reais</span>
+                <h2 class="text-4xl lg:text-5xl font-black text-gray-900 mb-6 font-display">
+                    O Que Dizem <span class="text-purple">os Pais</span>
+                </h2>
+                <p class="text-xl text-gray-600">Histórias reais de transformação com o Método Revisão</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Depoimento 1 -->
+                <div class="group relative bg-white p-8 rounded-3xl border-2 border-purple-100 hover:border-purple shadow-xl card-hover">
+                    <!-- Profile Image -->
+                    <div class="flex items-center space-x-4 mb-6">
+                        <img src="https://i.pravatar.cc/150?img=5" alt="Mariana Silva" class="w-16 h-16 rounded-full border-4 border-purple-100">
+                        <div>
+                            <div class="font-bold text-gray-900">Mariana Silva</div>
+                            <div class="text-sm text-gray-600">Mãe do Lucas, 7º ano</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Stars -->
+                    <div class="flex space-x-1 mb-4">
+                        <svg class="w-5 h-5 fill-yellow text-yellow" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-yellow text-yellow" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-yellow text-yellow" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-yellow text-yellow" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-yellow text-yellow" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                    
+                    <p class="text-gray-700 mb-6 italic leading-relaxed">"O Lucas foi de 5.5 para 8.0 em português em apenas 3 meses. Finalmente encontramos quem realmente entende as dificuldades dele!"</p>
+                    
+                    <div class="inline-flex items-center space-x-2 px-4 py-2 bg-green-100 rounded-full">
+                        <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span class="text-green-800 font-bold text-sm">De 5.5 para 8.0</span>
+                    </div>
+                </div>
+
+                <!-- Depoimento 2 -->
+                <div class="group relative bg-white p-8 rounded-3xl border-2 border-purple-100 hover:border-purple shadow-xl card-hover">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <img src="https://i.pravatar.cc/150?img=12" alt="Ricardo Oliveira" class="w-16 h-16 rounded-full border-4 border-purple-100">
+                        <div>
+                            <div class="font-bold text-gray-900">Ricardo Oliveira</div>
+                            <div class="text-sm text-gray-600">Pai da Júlia, 9º ano</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-1 mb-4">
+                        <svg class="w-5 h-5 fill-yellow text-yellow" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-yellow text-yellow" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-yellow text-yellow" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-yellow text-yellow" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-yellow text-yellow" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                    
+                    <p class="text-gray-700 mb-6 italic leading-relaxed">"A Júlia estava com risco de reprovação. Com o Método Revisão, não só passou de ano como tirou 9.0 na última prova!"</p>
+                    
+                    <div class="inline-flex items-center space-x-2 px-4 py-2 bg-green-100 rounded-full">
+                        <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span class="text-green-800 font-bold text-sm">Aprovada + Nota 9.0</span>
+                    </div>
+                </div>
+
+                <!-- Depoimento 3 -->
+                <div class="group relative bg-white p-8 rounded-3xl border-2 border-purple-100 hover:border-purple shadow-xl card-hover">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <img src="https://i.pravatar.cc/150?img=32" alt="Patrícia Costa" class="w-16 h-16 rounded-full border-4 border-purple-100">
+                        <div>
+                            <div class="font-bold text-gray-900">Patrícia Costa</div>
+                            <div class="text-sm text-gray-600">Mãe do Felipe, 2º Médio</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-1 mb-4">
+                        <svg class="w-5 h-5 fill-yellow text-yellow" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-yellow text-yellow" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-yellow text-yellow" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-yellow text-yellow" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-yellow text-yellow" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                    
+                    <p class="text-gray-700 mb-6 italic leading-relaxed">"Meu filho odiava redação. Hoje ele escreve com confiança e já tirou 900 pontos em simulados do ENEM!"</p>
+                    
+                    <div class="inline-flex items-center space-x-2 px-4 py-2 bg-green-100 rounded-full">
+                        <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span class="text-green-800 font-bold text-sm">900pts Redação ENEM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-24 bg-white reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Header -->
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-2 bg-purple-100 text-purple rounded-full text-sm font-bold mb-4">📚 Conteúdo Educacional</span>
+                <h2 class="text-4xl lg:text-5xl font-black text-gray-900 mb-6 font-display">
+                    Blog do <span class="text-purple">Método Revisão</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Dicas práticas, orientações e informações para ajudar seu filho a ter sucesso em português
+                </p>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="max-w-2xl mx-auto mb-12">
+                <div class="relative">
+                    <input 
+                        type="text" 
+                        id="searchInput"
+                        placeholder="Buscar artigos sobre dificuldades, redação, ENEM..." 
+                        class="w-full px-6 py-4 pl-14 rounded-2xl border-2 border-purple-100 focus:border-purple focus:outline-none text-lg"
+                    >
+                    <svg class="w-6 h-6 text-purple absolute left-5 top-1/2 transform -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Category Filter -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12">
+                <button class="category-filter active px-6 py-3 rounded-xl font-semibold transition-all duration-300 bg-purple text-white shadow-lg" data-category="all">
+                    Todos os Artigos
+                </button>
+                <button class="category-filter px-6 py-3 rounded-xl font-semibold transition-all duration-300 bg-white border-2 border-purple-100 text-gray-700 hover:border-purple hover:bg-purple-50" data-category="dificuldades">
+                    😰 Dificuldades
+                </button>
+                <button class="category-filter px-6 py-3 rounded-xl font-semibold transition-all duration-300 bg-white border-2 border-purple-100 text-gray-700 hover:border-purple hover:bg-purple-50" data-category="dicas">
+                    💡 Dicas para Pais
+                </button>
+                <button class="category-filter px-6 py-3 rounded-xl font-semibold transition-all duration-300 bg-white border-2 border-purple-100 text-gray-700 hover:border-purple hover:bg-purple-50" data-category="redacao">
+                    ✍️ Redação
+                </button>
+                <button class="category-filter px-6 py-3 rounded-xl font-semibold transition-all duration-300 bg-white border-2 border-purple-100 text-gray-700 hover:border-purple hover:bg-purple-50" data-category="enem">
+                    🎯 ENEM
+                </button>
+            </div>
+
+            <!-- Articles Grid -->
+            <div id="articlesGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Article 1 -->
+                <article class="blog-card group bg-white rounded-3xl overflow-hidden shadow-lg border-2 border-purple-100 hover:border-purple card-hover cursor-pointer" data-category="dificuldades">
+                    <div class="relative h-56 bg-gradient-to-br from-purple-100 to-purple-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80" 
+                             alt="Estudante com dificuldade" 
+                             class="w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4">
+                            <span class="px-4 py-2 bg-white rounded-full text-purple font-bold text-sm shadow-lg">
+                                😰 Dificuldades
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple transition-colors">
+                            Meu Filho Tem Dificuldade em Português: 7 Sinais de Alerta
+                        </h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Descubra os principais sinais de que seu filho precisa de ajuda especializada e o que fazer para reverter essa situação.
+                        </p>
+                        <div class="flex items-center justify-between text-sm text-gray-500">
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>8 min de leitura</span>
+                            </div>
+                            <svg class="w-5 h-5 text-purple group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="blog-card group bg-white rounded-3xl overflow-hidden shadow-lg border-2 border-purple-100 hover:border-purple card-hover cursor-pointer" data-category="dicas">
+                    <div class="relative h-56 bg-gradient-to-br from-yellow-100 to-yellow-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&q=80" 
+                             alt="Pai ajudando filho a estudar" 
+                             class="w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4">
+                            <span class="px-4 py-2 bg-white rounded-full text-yellow-dark font-bold text-sm shadow-lg">
+                                💡 Dicas para Pais
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple transition-colors">
+                            Como Ajudar Meu Filho em Português: Guia Completo 2025
+                        </h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Estratégias práticas e comprovadas que você pode implementar em casa para apoiar o desenvolvimento do seu filho.
+                        </p>
+                        <div class="flex items-center justify-between text-sm text-gray-500">
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>10 min de leitura</span>
+                            </div>
+                            <svg class="w-5 h-5 text-purple group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="blog-card group bg-white rounded-3xl overflow-hidden shadow-lg border-2 border-purple-100 hover:border-purple card-hover cursor-pointer" data-category="redacao">
+                    <div class="relative h-56 bg-gradient-to-br from-purple-100 to-purple-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&q=80" 
+                             alt="Redação sendo escrita" 
+                             class="w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4">
+                            <span class="px-4 py-2 bg-white rounded-full text-purple font-bold text-sm shadow-lg">
+                                ✍️ Redação
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple transition-colors">
+                            Como Melhorar a Redação: 7 Técnicas Comprovadas
+                        </h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Técnicas práticas e eficazes para desenvolver a habilidade de escrita do seu filho, desde textos básicos até nota 1000.
+                        </p>
+                        <div class="flex items-center justify-between text-sm text-gray-500">
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>12 min de leitura</span>
+                            </div>
+                            <svg class="w-5 h-5 text-purple group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="blog-card group bg-white rounded-3xl overflow-hidden shadow-lg border-2 border-purple-100 hover:border-purple card-hover cursor-pointer" data-category="dicas">
+                    <div class="relative h-56 bg-gradient-to-br from-yellow-100 to-yellow-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=600&q=80" 
+                             alt="Planejamento de estudos" 
+                             class="w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4">
+                            <span class="px-4 py-2 bg-white rounded-full text-yellow-dark font-bold text-sm shadow-lg">
+                                💡 Dicas para Pais
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple transition-colors">
+                            Aula Particular Vale a Pena? Veja Resultados Reais
+                        </h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Análise honesta sobre quando vale investir em aula particular, comparação com outras opções e casos reais de sucesso.
+                        </p>
+                        <div class="flex items-center justify-between text-sm text-gray-500">
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>10 min de leitura</span>
+                            </div>
+                            <svg class="w-5 h-5 text-purple group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="blog-card group bg-white rounded-3xl overflow-hidden shadow-lg border-2 border-purple-100 hover:border-purple card-hover cursor-pointer" data-category="dificuldades">
+                    <div class="relative h-56 bg-gradient-to-br from-purple-100 to-purple-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&q=80" 
+                             alt="Lendo e interpretando" 
+                             class="w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4">
+                            <span class="px-4 py-2 bg-white rounded-full text-purple font-bold text-sm shadow-lg">
+                                😰 Dificuldades
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple transition-colors">
+                            Por Que Meu Filho Não Consegue Interpretar Textos?
+                        </h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            As causas mais comuns da dificuldade de interpretação e técnicas específicas para desenvolver essa habilidade fundamental.
+                        </p>
+                        <div class="flex items-center justify-between text-sm text-gray-500">
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>9 min de leitura</span>
+                            </div>
+                            <svg class="w-5 h-5 text-purple group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 6 -->
+                <article class="blog-card group bg-white rounded-3xl overflow-hidden shadow-lg border-2 border-purple-100 hover:border-purple card-hover cursor-pointer" data-category="enem">
+                    <div class="relative h-56 bg-gradient-to-br from-yellow-100 to-yellow-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?w=600&q=80" 
+                             alt="Preparação ENEM" 
+                             class="w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4">
+                            <span class="px-4 py-2 bg-white rounded-full text-yellow-dark font-bold text-sm shadow-lg">
+                                🎯 ENEM
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple transition-colors">
+                            Como Estudar Português para o ENEM: Plano Definitivo
+                        </h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Cronograma completo de estudos, conteúdos prioritários e estratégias para maximizar sua pontuação em Linguagens.
+                        </p>
+                        <div class="flex items-center justify-between text-sm text-gray-500">
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>15 min de leitura</span>
+                            </div>
+                            <svg class="w-5 h-5 text-purple group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 7 -->
+                <article class="blog-card group bg-white rounded-3xl overflow-hidden shadow-lg border-2 border-purple-100 hover:border-purple card-hover cursor-pointer" data-category="redacao">
+                    <div class="relative h-56 bg-gradient-to-br from-purple-100 to-purple-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=600&q=80" 
+                             alt="Estrutura de texto" 
+                             class="w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4">
+                            <span class="px-4 py-2 bg-white rounded-full text-purple font-bold text-sm shadow-lg">
+                                ✍️ Redação
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple transition-colors">
+                            Estrutura da Redação ENEM: Guia Passo a Passo
+                        </h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Tudo o que você precisa saber sobre a estrutura da redação dissertativa-argumentativa do ENEM, com exemplos práticos.
+                        </p>
+                        <div class="flex items-center justify-between text-sm text-gray-500">
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>12 min de leitura</span>
+                            </div>
+                            <svg class="w-5 h-5 text-purple group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 8 -->
+                <article class="blog-card group bg-white rounded-3xl overflow-hidden shadow-lg border-2 border-purple-100 hover:border-purple card-hover cursor-pointer" data-category="dicas">
+                    <div class="relative h-56 bg-gradient-to-br from-yellow-100 to-yellow-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80" 
+                             alt="Estudando para prova" 
+                             class="w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4">
+                            <span class="px-4 py-2 bg-white rounded-full text-yellow-dark font-bold text-sm shadow-lg">
+                                💡 Dicas para Pais
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple transition-colors">
+                            Nota Baixa em Português: O Que Fazer Antes da Próxima Prova
+                        </h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Plano de ação imediato para ajudar seu filho a recuperar as notas em português de forma rápida e eficaz.
+                        </p>
+                        <div class="flex items-center justify-between text-sm text-gray-500">
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>7 min de leitura</span>
+                            </div>
+                            <svg class="w-5 h-5 text-purple group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 9 -->
+                <article class="blog-card group bg-white rounded-3xl overflow-hidden shadow-lg border-2 border-purple-100 hover:border-purple card-hover cursor-pointer" data-category="enem">
+                    <div class="relative h-56 bg-gradient-to-br from-purple-100 to-purple-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=600&q=80" 
+                             alt="Interpretação ENEM" 
+                             class="w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4">
+                            <span class="px-4 py-2 bg-white rounded-full text-purple font-bold text-sm shadow-lg">
+                                🎯 ENEM
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple transition-colors">
+                            Interpretação de Texto no ENEM: Técnicas Para Não Errar
+                        </h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Métodos práticos e estratégias comprovadas para dominar interpretação de textos nas questões do ENEM.
+                        </p>
+                        <div class="flex items-center justify-between text-sm text-gray-500">
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>11 min de leitura</span>
+                            </div>
+                            <svg class="w-5 h-5 text-purple group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- No Results Message -->
+            <div id="noResults" class="hidden text-center py-16">
+                <svg class="w-20 h-20 text-purple mx-auto mb-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Nenhum artigo encontrado</h3>
+                <p class="text-gray-600">Tente buscar por outros termos ou categorias</p>
+            </div>
+
+            <!-- Newsletter CTA -->
+            <div class="mt-20 relative overflow-hidden bg-purple-gradient rounded-3xl p-12 text-center shadow-2xl">
+                <div class="absolute inset-0 opacity-10">
+                    <div class="absolute top-0 left-0 w-72 h-72 bg-yellow rounded-full filter blur-3xl"></div>
+                    <div class="absolute bottom-0 right-0 w-72 h-72 bg-purple-light rounded-full filter blur-3xl"></div>
+                </div>
+                <div class="relative z-10">
+                    <span class="text-5xl mb-4 block">📧</span>
+                    <h3 class="text-3xl font-black text-white mb-4 font-display">Receba Conteúdo Exclusivo</h3>
+                    <p class="text-purple-100 mb-8 text-lg max-w-2xl mx-auto">
+                        Cadastre-se e receba dicas semanais para ajudar seu filho em português direto no seu email
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                        <input
+                            type="email"
+                            placeholder="Seu melhor email"
+                            class="flex-1 px-6 py-4 rounded-xl text-gray-900 focus:outline-none focus:ring-4 focus:ring-yellow"
+                        />
+                        <button class="px-8 py-4 bg-yellow-gradient text-gray-900 font-bold rounded-xl transition-all duration-200 whitespace-nowrap hover:shadow-2xl transform hover:scale-105">
+                            Quero Receber 🚀
+                        </button>
+                    </div>
+                    <p class="text-xs text-purple-100 mt-4">
+                        🔒 Seus dados estão seguros. Sem spam, prometemos!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Para Pais Section -->
+    <section id="pais" class="py-24 bg-gradient-to-b from-purple-50 to-white reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-2 bg-yellow-100 text-yellow-dark rounded-full text-sm font-bold mb-4">👨‍👩‍👧 Para Pais</span>
+                <h2 class="text-4xl lg:text-5xl font-black text-gray-900 mb-6 font-display">
+                    Entendemos Sua <span class="text-purple">Preocupação</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Como pai ou mãe, sabemos que ver seu filho com dificuldades gera angústia. Estamos aqui para ajudar.
+                </p>
+            </div>
+
+            <!-- FAQ Accordion -->
+            <div class="max-w-4xl mx-auto space-y-4">
+                <!-- FAQ 1 -->
+                <details class="group bg-white rounded-2xl p-8 border-2 border-purple-100 shadow-lg cursor-pointer hover:border-purple transition-colors">
+                    <summary class="flex justify-between items-center font-bold text-xl text-gray-900 list-none cursor-pointer">
+                        <span class="flex items-center space-x-3">
+                            <span class="text-3xl">🤔</span>
+                            <span>Meu filho realmente precisa de aula particular?</span>
+                        </span>
+                        <svg class="w-6 h-6 text-purple transform group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </summary>
+                    <p class="mt-6 text-gray-700 leading-relaxed text-lg border-t border-purple-100 pt-6">
+                        Nem todo aluno precisa de reforço. Mas há sinais claros: <strong>notas consistentemente baixas</strong> (não foi "só dessa vez"), 
+                        demora excessiva para fazer lição, ansiedade visível com a matéria, e dificuldade que <strong>persiste mesmo quando o aluno se esforça</strong>. 
+                        Se seu filho estuda e não evolui, o problema não é falta de esforço - é falta da abordagem certa.
+                    </p>
+                </details>
+
+                <!-- FAQ 2 -->
+                <details class="group bg-white rounded-2xl p-8 border-2 border-purple-100 shadow-lg cursor-pointer hover:border-purple transition-colors">
+                    <summary class="flex justify-between items-center font-bold text-xl text-gray-900 list-none cursor-pointer">
+                        <span class="flex items-center space-x-3">
+                            <span class="text-3xl">⏰</span>
+                            <span>Quanto tempo até ver resultados?</span>
+                        </span>
+                        <svg class="w-6 h-6 text-purple transform group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </summary>
+                    <p class="mt-6 text-gray-700 leading-relaxed text-lg border-t border-purple-100 pt-6">
+                        A maioria dos pais relata mudanças perceptíveis em <strong>4-6 semanas</strong>: mais confiança do aluno, melhora na lição de casa, 
+                        redução da ansiedade. Resultados em notas costumam aparecer no <strong>bimestre seguinte</strong> (2-3 meses). 
+                        Transformação completa e autonomia geralmente levam 6 meses a 1 ano.
+                    </p>
+                </details>
+
+                <!-- FAQ 3 -->
+                <details class="group bg-white rounded-2xl p-8 border-2 border-purple-100 shadow-lg cursor-pointer hover:border-purple transition-colors">
+                    <summary class="flex justify-between items-center font-bold text-xl text-gray-900 list-none cursor-pointer">
+                        <span class="flex items-center space-x-3">
+                            <span class="text-3xl">💰</span>
+                            <span>Vale a pena o investimento?</span>
+                        </span>
+                        <svg class="w-6 h-6 text-purple transform group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </summary>
+                    <p class="mt-6 text-gray-700 leading-relaxed text-lg border-t border-purple-100 pt-6">
+                        Compare: reprovar um ano em escola particular custa <strong>R$15.000-30.000</strong>. Um ano de cursinho: <strong>R$10.000-20.000</strong>. 
+                        Nosso investimento mensal (em média R$600-900 para 2x por semana) <strong>previne gastos muito maiores</strong> e, mais importante, 
+                        constrói uma base sólida que seu filho levará para a vida.
+                    </p>
+                </details>
+
+                <!-- FAQ 4 -->
+                <details class="group bg-white rounded-2xl p-8 border-2 border-purple-100 shadow-lg cursor-pointer hover:border-purple transition-colors">
+                    <summary class="flex justify-between items-center font-bold text-xl text-gray-900 list-none cursor-pointer">
+                        <span class="flex items-center space-x-3">
+                            <span class="text-3xl">👨‍🏫</span>
+                            <span>E se meu filho não gostar do professor?</span>
+                        </span>
+                        <svg class="w-6 h-6 text-purple transform group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </summary>
+                    <p class="mt-6 text-gray-700 leading-relaxed text-lg border-t border-purple-100 pt-6">
+                        Fazemos a <strong>troca sem custo e sem burocracia</strong>. A conexão entre professor e aluno é fundamental para o sucesso. 
+                        Se após 2-3 aulas você perceber que não está funcionando, simplesmente nos informe e encontraremos outro professor com perfil mais adequado.
+                    </p>
+                </details>
+            </div>
+
+            <!-- CTA Box -->
+            <div class="mt-16 text-center bg-gradient-to-r from-yellow-100 to-purple-100 rounded-3xl p-12 border-2 border-purple-200">
+                <h3 class="text-3xl font-black text-gray-900 mb-4 font-display">
+                    Ainda tem dúvidas? <span class="text-purple">Vamos conversar!</span>
+                </h3>
+                <p class="text-xl text-gray-700 mb-8">
+                    Agende um diagnóstico gratuito e sem compromisso. Vamos entender as dificuldades do seu filho juntos.
+                </p>
+                <a href="#contato" class="inline-flex items-center space-x-2 px-10 py-5 bg-purple-gradient text-white font-bold text-lg rounded-2xl hover:shadow-2xl transform hover:scale-105 transition-all">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                    </svg>
+                    <span>Falar com Nossa Equipe Agora</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section id="contato" class="py-24 relative overflow-hidden">
+        <!-- Animated Background -->
+        <div class="absolute inset-0 bg-purple-gradient"></div>
+        <div class="blob blob-yellow w-96 h-96 top-10 right-10 opacity-30"></div>
+        <div class="blob blob-purple-light w-96 h-96 bottom-10 left-10 opacity-30"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <span class="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm font-bold mb-6">🎉 Oferta Especial</span>
+            
+            <h2 class="text-4xl lg:text-6xl font-black text-white mb-6 font-display">
+                Comece Hoje a <span class="text-yellow">Transformação</span> do Seu Filho!
+            </h2>
+            
+            <p class="text-xl text-purple-100 mb-8 leading-relaxed">
+                Agende uma aula experimental <span class="font-bold text-white">100% gratuita</span>. Sem compromisso. Sem cartão de crédito. 
+                Apenas uma oportunidade de ver como podemos ajudar.
+            </p>
+
+            <!-- Benefits Grid -->
+            <div class="grid md:grid-cols-3 gap-6 mb-12">
+                <div class="glass rounded-2xl p-6">
+                    <div class="text-4xl mb-3">⏱️</div>
+                    <div class="font-bold text-white mb-2">1 Hora Completa</div>
+                    <div class="text-sm text-purple-100">Aula experimental full</div>
+                </div>
+                <div class="glass rounded-2xl p-6">
+                    <div class="text-4xl mb-3">🎯</div>
+                    <div class="font-bold text-white mb-2">Diagnóstico</div>
+                    <div class="text-sm text-purple-100">Personalizado e detalhado</div>
+                </div>
+                <div class="glass rounded-2xl p-6">
+                    <div class="text-4xl mb-3">📋</div>
+                    <div class="font-bold text-white mb-2">Plano de Ação</div>
+                    <div class="text-sm text-purple-100">Caminho para o sucesso</div>
+                </div>
+            </div>
+
+            <!-- CTA Button -->
+            <a href="https://wa.me/5522992682207?text=Olá! Gostaria de agendar minha aula experimental gratuita de português." 
+               target="_blank" 
+               class="inline-flex items-center space-x-3 px-12 py-6 bg-yellow-gradient text-gray-900 font-black text-xl rounded-2xl transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-yellow/50 mb-6">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                <span>AGENDAR MINHA AULA GRÁTIS AGORA</span>
+            </a>
+
+            <p class="text-sm text-purple-100">
+                🔒 Seus dados estão seguros. Não compartilhamos com terceiros. | ☎️ (22) 99268-2207
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid md:grid-cols-4 gap-12">
+                <!-- Logo Column -->
+                <div class="md:col-span-1">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-purple-gradient rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                            </svg>
+                        </div>
+                        <span class="text-xl font-bold text-white font-display">Método Revisão</span>
+                    </div>
+                    <p class="text-sm text-gray-400 leading-relaxed mb-6">
+                        Transformando dificuldades em português em resultados concretos desde 2017.
+                    </p>
+                    <!-- Social Icons -->
+                    <div class="flex space-x-3">
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-purple rounded-full flex items-center justify-center transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-purple rounded-full flex items-center justify-center transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <div>
+                    <h4 class="text-white font-bold mb-4">Navegação</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#home" class="hover:text-purple transition-colors">Início</a></li>
+                        <li><a href="#curso" class="hover:text-purple transition-colors">Curso</a></li>
+                        <li><a href="#metodologia" class="hover:text-purple transition-colors">Metodologia</a></li>
+                        <li><a href="#depoimentos" class="hover:text-purple transition-colors">Depoimentos</a></li>
+                    </ul>
+                </div>
+
+                <!-- Courses -->
+                <div>
+                    <h4 class="text-white font-bold mb-4">Cursos</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#curso" class="hover:text-purple transition-colors">6º ao 9º Ano</a></li>
+                        <li><a href="#curso" class="hover:text-purple transition-colors">Ensino Médio</a></li>
+                        <li><a href="#curso" class="hover:text-purple transition-colors">Redação ENEM</a></li>
+                        <li><a href="#curso" class="hover:text-purple transition-colors">Interpretação</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-white font-bold mb-4">Contato</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 flex-shrink-0 mt-0.5 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                            </svg>
+                            <div>
+                                <div class="text-white font-semibold mb-1">WhatsApp</div>
+                                <a href="https://wa.me/5522992682207" class="hover:text-purple transition-colors">(22) 99268-2207</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <svg class="w-5 h-5 flex-shrink-0 mt-0.5 text-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <div>
+                                <div class="text-white font-semibold mb-1">Email</div>
+                                <a href="/cdn-cgi/l/email-protection#c3a0acadb7a2b7ac83aea6b7aca7aca6b1a6b5aab0a2aceda0acaeeda1b1" class="hover:text-purple transition-colors"><span class="__cf_email__" data-cfemail="6a0905041e0b1e052a070f1e050e050f180f1c03190b0544090507440818">[email&#160;protected]</span></a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <a href="#contato" class="mt-6 block w-full px-6 py-3 bg-yellow-gradient text-gray-900 font-bold rounded-xl transition-all duration-200 text-center shadow-lg hover:shadow-xl">
+                        Aula Grátis 🎓
+                    </a>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                    <p>© 2025 Método Revisão. Todos os direitos reservados.</p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="#" class="hover:text-purple transition-colors">Política de Privacidade</a>
+                        <a href="#" class="hover:text-purple transition-colors">Termos de Uso</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Nav background on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('mainNav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-xl');
+            } else {
+                nav.classList.remove('shadow-xl');
+            }
+        });
+
+        // Scroll reveal animation
+        const reveals = document.querySelectorAll('.reveal');
+        
+        const revealOnScroll = () => {
+            reveals.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('active');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll();
+
+        // Blog Category Filter
+        const categoryButtons = document.querySelectorAll('.category-filter');
+        const blogCards = document.querySelectorAll('.blog-card');
+        const noResults = document.getElementById('noResults');
+        const searchInput = document.getElementById('searchInput');
+
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const category = button.dataset.category;
+                
+                // Update active button
+                categoryButtons.forEach(btn => {
+                    btn.classList.remove('active', 'bg-purple', 'text-white', 'shadow-lg');
+                    btn.classList.add('bg-white', 'border-2', 'border-purple-100', 'text-gray-700');
+                });
+                button.classList.remove('bg-white', 'border-2', 'border-purple-100', 'text-gray-700');
+                button.classList.add('active', 'bg-purple', 'text-white', 'shadow-lg');
+                
+                // Filter cards
+                let visibleCount = 0;
+                blogCards.forEach(card => {
+                    const cardCategory = card.dataset.category;
+                    if (category === 'all' || cardCategory === category) {
+                        card.style.display = 'block';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+                
+                // Show/hide no results
+                noResults.classList.toggle('hidden', visibleCount > 0);
+                searchInput.value = '';
+            });
+        });
+
+        // Blog Search
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            let visibleCount = 0;
+            
+            blogCards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const description = card.querySelector('p').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            noResults.classList.toggle('hidden', visibleCount > 0);
+            
+            if (searchTerm) {
+                categoryButtons.forEach(btn => {
+                    btn.classList.remove('active', 'bg-purple', 'text-white', 'shadow-lg');
+                    btn.classList.add('bg-white', 'border-2', 'border-purple-100', 'text-gray-700');
+                });
+                categoryButtons[0].classList.remove('bg-white', 'border-2', 'border-purple-100', 'text-gray-700');
+                categoryButtons[0].classList.add('active', 'bg-purple', 'text-white', 'shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>
