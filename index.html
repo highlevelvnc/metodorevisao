@@ -836,364 +836,288 @@
         </div>
     </section>
 
-    <!-- Blog Section -->
-    <section id="blog" class="py-24 bg-white reveal">
+<section id="blog" class="py-24 bg-white reveal">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Header -->
             <div class="text-center mb-16">
-                <span class="inline-block px-4 py-2 bg-purple-100 text-purple rounded-full text-sm font-bold mb-4">📚 Conteúdo Educacional</span>
+                <span class="inline-block px-4 py-2 bg-purple-100 text-purple rounded-full text-sm font-bold mb-4">📚 Central de Conhecimento</span>
                 <h2 class="text-4xl lg:text-5xl font-black text-gray-900 mb-6 font-display">
                     Blog do <span class="text-purple">Método Revisão</span>
                 </h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Dicas práticas, orientações e informações para ajudar seu filho a ter sucesso em português
+                    Navegue por nossos 20 artigos exclusivos com dicas de estudo, redação e orientações para pais.
                 </p>
             </div>
 
-            <!-- Search Bar -->
             <div class="max-w-2xl mx-auto mb-12">
                 <div class="relative">
-                    <input 
-                        type="text" 
-                        id="searchInput"
-                        placeholder="Buscar artigos sobre dificuldades, redação, ENEM..." 
-                        class="w-full px-6 py-4 pl-14 rounded-2xl border-2 border-purple-100 focus:border-purple focus:outline-none text-lg"
-                    >
+                    <input type="text" id="searchInput" placeholder="O que você quer aprender hoje? (Ex: Redação, Inglês, Dificuldades)" 
+                           class="w-full px-6 py-4 pl-14 rounded-2xl border-2 border-purple-100 focus:border-purple focus:outline-none text-lg shadow-sm transition-all focus:shadow-md">
                     <svg class="w-6 h-6 text-purple absolute left-5 top-1/2 transform -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                     </svg>
                 </div>
             </div>
 
-            <!-- Category Filter -->
             <div class="flex flex-wrap justify-center gap-3 mb-12">
-                <button class="category-filter active px-6 py-3 rounded-xl font-semibold transition-all duration-300 bg-purple text-white shadow-lg" data-category="all">
-                    Todos os Artigos
-                </button>
-                <button class="category-filter px-6 py-3 rounded-xl font-semibold transition-all duration-300 bg-white border-2 border-purple-100 text-gray-700 hover:border-purple hover:bg-purple-50" data-category="dificuldades">
-                    😰 Dificuldades
-                </button>
-                <button class="category-filter px-6 py-3 rounded-xl font-semibold transition-all duration-300 bg-white border-2 border-purple-100 text-gray-700 hover:border-purple hover:bg-purple-50" data-category="dicas">
-                    💡 Dicas para Pais
-                </button>
-                <button class="category-filter px-6 py-3 rounded-xl font-semibold transition-all duration-300 bg-white border-2 border-purple-100 text-gray-700 hover:border-purple hover:bg-purple-50" data-category="redacao">
-                    ✍️ Redação
-                </button>
-                <button class="category-filter px-6 py-3 rounded-xl font-semibold transition-all duration-300 bg-white border-2 border-purple-100 text-gray-700 hover:border-purple hover:bg-purple-50" data-category="enem">
-                    🎯 ENEM
-                </button>
+                <button class="category-filter active px-5 py-2.5 rounded-xl font-semibold transition-all duration-300 bg-purple text-white shadow-lg text-sm md:text-base" data-category="all">Todos</button>
+                <button class="category-filter px-5 py-2.5 rounded-xl font-semibold transition-all duration-300 bg-white border-2 border-purple-100 text-gray-700 hover:border-purple hover:bg-purple-50 text-sm md:text-base" data-category="redacao">✍️ Redação & ENEM</button>
+                <button class="category-filter px-5 py-2.5 rounded-xl font-semibold transition-all duration-300 bg-white border-2 border-purple-100 text-gray-700 hover:border-purple hover:bg-purple-50 text-sm md:text-base" data-category="portugues">📚 Português</button>
+                <button class="category-filter px-5 py-2.5 rounded-xl font-semibold transition-all duration-300 bg-white border-2 border-purple-100 text-gray-700 hover:border-purple hover:bg-purple-50 text-sm md:text-base" data-category="ingles">🇺🇸 Inglês</button>
+                <button class="category-filter px-5 py-2.5 rounded-xl font-semibold transition-all duration-300 bg-white border-2 border-purple-100 text-gray-700 hover:border-purple hover:bg-purple-50 text-sm md:text-base" data-category="dicas">💡 Pais & Dicas</button>
             </div>
 
-            <!-- Articles Grid -->
             <div id="articlesGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Article 1 -->
-                <article class="blog-card group bg-white rounded-3xl overflow-hidden shadow-lg border-2 border-purple-100 hover:border-purple card-hover cursor-pointer" data-category="dificuldades">
-                    <div class="relative h-56 bg-gradient-to-br from-purple-100 to-purple-200 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80" 
-                             alt="Estudante com dificuldade" 
-                             class="w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute top-4 left-4">
-                            <span class="px-4 py-2 bg-white rounded-full text-purple font-bold text-sm shadow-lg">
-                                😰 Dificuldades
-                            </span>
-                        </div>
+                
+                <article class="blog-card group bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:border-purple hover:shadow-2xl transition-all duration-300" data-category="redacao">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80" alt="Aulas Online" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4"><span class="px-3 py-1 bg-purple text-white text-xs font-bold rounded-full">Guia Completo</span></div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple transition-colors">
-                            Meu Filho Tem Dificuldade em Português: 7 Sinais de Alerta
-                        </h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">
-                            Descubra os principais sinais de que seu filho precisa de ajuda especializada e o que fazer para reverter essa situação.
-                        </p>
-                        <div class="flex items-center justify-between text-sm text-gray-500">
-                            <div class="flex items-center space-x-2">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                                <span>8 min de leitura</span>
-                            </div>
-                            <svg class="w-5 h-5 text-purple group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                            </svg>
-                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple line-clamp-2">Aulas de Redação Online para ENEM: O Guia Definitivo</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Descubra como se preparar com aulas personalizadas e conquiste o tão sonhado 900+.</p>
+                        <a href="blog/aulas-redacao-online-enem.html" class="text-purple font-bold text-sm hover:underline">Ler Artigo →</a>
                     </div>
                 </article>
 
-                <!-- Article 2 -->
-                <article class="blog-card group bg-white rounded-3xl overflow-hidden shadow-lg border-2 border-purple-100 hover:border-purple card-hover cursor-pointer" data-category="dicas">
-                    <div class="relative h-56 bg-gradient-to-br from-yellow-100 to-yellow-200 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&q=80" 
-                             alt="Pai ajudando filho a estudar" 
-                             class="w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute top-4 left-4">
-                            <span class="px-4 py-2 bg-white rounded-full text-yellow-dark font-bold text-sm shadow-lg">
-                                💡 Dicas para Pais
-                            </span>
-                        </div>
+                <article class="blog-card group bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:border-purple hover:shadow-2xl transition-all duration-300" data-category="redacao">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&q=80" alt="Nota 900" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4"><span class="px-3 py-1 bg-yellow text-gray-900 text-xs font-bold rounded-full">Dica de Ouro</span></div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple transition-colors">
-                            Como Ajudar Meu Filho em Português: Guia Completo 2025
-                        </h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">
-                            Estratégias práticas e comprovadas que você pode implementar em casa para apoiar o desenvolvimento do seu filho.
-                        </p>
-                        <div class="flex items-center justify-between text-sm text-gray-500">
-                            <div class="flex items-center space-x-2">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                                <span>10 min de leitura</span>
-                            </div>
-                            <svg class="w-5 h-5 text-purple group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                            </svg>
-                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple line-clamp-2">Como Tirar 900 na Redação do ENEM: 5 Passos Práticos</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">O segredo dos alunos nota 1000 revelado. Veja a estrutura exata para garantir sua nota.</p>
+                        <a href="blog/como-tirar-900-redacao-enem.html" class="text-purple font-bold text-sm hover:underline">Ler Artigo →</a>
                     </div>
                 </article>
 
-                <!-- Article 3 -->
-                <article class="blog-card group bg-white rounded-3xl overflow-hidden shadow-lg border-2 border-purple-100 hover:border-purple card-hover cursor-pointer" data-category="redacao">
-                    <div class="relative h-56 bg-gradient-to-br from-purple-100 to-purple-200 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&q=80" 
-                             alt="Redação sendo escrita" 
-                             class="w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute top-4 left-4">
-                            <span class="px-4 py-2 bg-white rounded-full text-purple font-bold text-sm shadow-lg">
-                                ✍️ Redação
-                            </span>
-                        </div>
+                <article class="blog-card group bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:border-purple hover:shadow-2xl transition-all duration-300" data-category="redacao">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=600&q=80" alt="Estrutura" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4"><span class="px-3 py-1 bg-purple-light text-white text-xs font-bold rounded-full">Técnica</span></div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple transition-colors">
-                            Como Melhorar a Redação: 7 Técnicas Comprovadas
-                        </h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">
-                            Técnicas práticas e eficazes para desenvolver a habilidade de escrita do seu filho, desde textos básicos até nota 1000.
-                        </p>
-                        <div class="flex items-center justify-between text-sm text-gray-500">
-                            <div class="flex items-center space-x-2">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                                <span>12 min de leitura</span>
-                            </div>
-                            <svg class="w-5 h-5 text-purple group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                            </svg>
-                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple line-clamp-2">Estrutura da Redação ENEM Passo a Passo</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Introdução, desenvolvimento e conclusão: entenda o que os corretores esperam.</p>
+                        <a href="blog/estrutura-redacao-enem-passo-a-passo.html" class="text-purple font-bold text-sm hover:underline">Ler Artigo →</a>
                     </div>
                 </article>
 
-                <!-- Article 4 -->
-                <article class="blog-card group bg-white rounded-3xl overflow-hidden shadow-lg border-2 border-purple-100 hover:border-purple card-hover cursor-pointer" data-category="dicas">
-                    <div class="relative h-56 bg-gradient-to-br from-yellow-100 to-yellow-200 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=600&q=80" 
-                             alt="Planejamento de estudos" 
-                             class="w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute top-4 left-4">
-                            <span class="px-4 py-2 bg-white rounded-full text-yellow-dark font-bold text-sm shadow-lg">
-                                💡 Dicas para Pais
-                            </span>
+                <article class="blog-card group bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:border-purple hover:shadow-2xl transition-all duration-300" data-category="redacao">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="absolute inset-0 bg-red-100 flex items-center justify-center">
+                            <span class="text-4xl">🚫</span>
                         </div>
+                        <div class="absolute top-4 left-4"><span class="px-3 py-1 bg-red-500 text-white text-xs font-bold rounded-full">Alerta</span></div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple transition-colors">
-                            Aula Particular Vale a Pena? Veja Resultados Reais
-                        </h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">
-                            Análise honesta sobre quando vale investir em aula particular, comparação com outras opções e casos reais de sucesso.
-                        </p>
-                        <div class="flex items-center justify-between text-sm text-gray-500">
-                            <div class="flex items-center space-x-2">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                                <span>10 min de leitura</span>
-                            </div>
-                            <svg class="w-5 h-5 text-purple group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                            </svg>
-                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple line-clamp-2">7 Erros que Zeram a Redação ENEM</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Fuga ao tema, desrespeito aos direitos humanos e outras falhas fatais.</p>
+                        <a href="blog/erros-que-zeram-redacao-enem.html" class="text-purple font-bold text-sm hover:underline">Ler Artigo →</a>
                     </div>
                 </article>
 
-                <!-- Article 5 -->
-                <article class="blog-card group bg-white rounded-3xl overflow-hidden shadow-lg border-2 border-purple-100 hover:border-purple card-hover cursor-pointer" data-category="dificuldades">
-                    <div class="relative h-56 bg-gradient-to-br from-purple-100 to-purple-200 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&q=80" 
-                             alt="Lendo e interpretando" 
-                             class="w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute top-4 left-4">
-                            <span class="px-4 py-2 bg-white rounded-full text-purple font-bold text-sm shadow-lg">
-                                😰 Dificuldades
-                            </span>
-                        </div>
+                <article class="blog-card group bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:border-purple hover:shadow-2xl transition-all duration-300" data-category="redacao">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&q=80" alt="Aula Particular" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple transition-colors">
-                            Por Que Meu Filho Não Consegue Interpretar Textos?
-                        </h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">
-                            As causas mais comuns da dificuldade de interpretação e técnicas específicas para desenvolver essa habilidade fundamental.
-                        </p>
-                        <div class="flex items-center justify-between text-sm text-gray-500">
-                            <div class="flex items-center space-x-2">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                                <span>9 min de leitura</span>
-                            </div>
-                            <svg class="w-5 h-5 text-purple group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                            </svg>
-                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple line-clamp-2">Aulas Particulares de Redação Valem a Pena?</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Análise sincera: Cursinho de massa vs Professor Particular. Qual o melhor ROI?</p>
+                        <a href="blog/aulas-particulares-redacao-valem-a-pena.html" class="text-purple font-bold text-sm hover:underline">Ler Artigo →</a>
                     </div>
                 </article>
 
-                <!-- Article 6 -->
-                <article class="blog-card group bg-white rounded-3xl overflow-hidden shadow-lg border-2 border-purple-100 hover:border-purple card-hover cursor-pointer" data-category="enem">
-                    <div class="relative h-56 bg-gradient-to-br from-yellow-100 to-yellow-200 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?w=600&q=80" 
-                             alt="Preparação ENEM" 
-                             class="w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute top-4 left-4">
-                            <span class="px-4 py-2 bg-white rounded-full text-yellow-dark font-bold text-sm shadow-lg">
-                                🎯 ENEM
-                            </span>
+                <article class="blog-card group bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:border-purple hover:shadow-2xl transition-all duration-300" data-category="redacao">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="absolute inset-0 bg-blue-50 flex items-center justify-center text-center p-4">
+                            <span class="text-blue-800 font-black text-xl">FUVEST<br>vs<br>ENEM</span>
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple transition-colors">
-                            Como Estudar Português para o ENEM: Plano Definitivo
-                        </h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">
-                            Cronograma completo de estudos, conteúdos prioritários e estratégias para maximizar sua pontuação em Linguagens.
-                        </p>
-                        <div class="flex items-center justify-between text-sm text-gray-500">
-                            <div class="flex items-center space-x-2">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                                <span>15 min de leitura</span>
-                            </div>
-                            <svg class="w-5 h-5 text-purple group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                            </svg>
-                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple line-clamp-2">Redação Vestibular vs. ENEM: Diferenças</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Gêneros textuais da Unicamp e Fuvest exigem preparação diferente. Entenda.</p>
+                        <a href="blog/aulas-redacao-vestibular.html" class="text-purple font-bold text-sm hover:underline">Ler Artigo →</a>
                     </div>
                 </article>
 
-                <!-- Article 7 -->
-                <article class="blog-card group bg-white rounded-3xl overflow-hidden shadow-lg border-2 border-purple-100 hover:border-purple card-hover cursor-pointer" data-category="redacao">
-                    <div class="relative h-56 bg-gradient-to-br from-purple-100 to-purple-200 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=600&q=80" 
-                             alt="Estrutura de texto" 
-                             class="w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute top-4 left-4">
-                            <span class="px-4 py-2 bg-white rounded-full text-purple font-bold text-sm shadow-lg">
-                                ✍️ Redação
-                            </span>
-                        </div>
+                <article class="blog-card group bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:border-purple hover:shadow-2xl transition-all duration-300" data-category="redacao">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80" alt="Ensino Médio" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple transition-colors">
-                            Estrutura da Redação ENEM: Guia Passo a Passo
-                        </h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">
-                            Tudo o que você precisa saber sobre a estrutura da redação dissertativa-argumentativa do ENEM, com exemplos práticos.
-                        </p>
-                        <div class="flex items-center justify-between text-sm text-gray-500">
-                            <div class="flex items-center space-x-2">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                                <span>12 min de leitura</span>
-                            </div>
-                            <svg class="w-5 h-5 text-purple group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                            </svg>
-                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple line-clamp-2">Como Melhorar a Redação no Ensino Médio</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Não deixe para o 3º ano. Comece a construir sua base no 1º ano.</p>
+                        <a href="blog/melhorar-redacao-ensino-medio.html" class="text-purple font-bold text-sm hover:underline">Ler Artigo →</a>
                     </div>
                 </article>
 
-                <!-- Article 8 -->
-                <article class="blog-card group bg-white rounded-3xl overflow-hidden shadow-lg border-2 border-purple-100 hover:border-purple card-hover cursor-pointer" data-category="dicas">
-                    <div class="relative h-56 bg-gradient-to-br from-yellow-100 to-yellow-200 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80" 
-                             alt="Estudando para prova" 
-                             class="w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute top-4 left-4">
-                            <span class="px-4 py-2 bg-white rounded-full text-yellow-dark font-bold text-sm shadow-lg">
-                                💡 Dicas para Pais
-                            </span>
+                <article class="blog-card group bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:border-purple hover:shadow-2xl transition-all duration-300" data-category="redacao">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="absolute inset-0 bg-gray-100 flex items-center justify-center">
+                            <span class="text-4xl">😫</span>
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple transition-colors">
-                            Nota Baixa em Português: O Que Fazer Antes da Próxima Prova
-                        </h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">
-                            Plano de ação imediato para ajudar seu filho a recuperar as notas em português de forma rápida e eficaz.
-                        </p>
-                        <div class="flex items-center justify-between text-sm text-gray-500">
-                            <div class="flex items-center space-x-2">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                                <span>7 min de leitura</span>
-                            </div>
-                            <svg class="w-5 h-5 text-purple group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                            </svg>
-                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple line-clamp-2">Tenho Muita Dificuldade em Redação: O Que Fazer?</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Bloqueio criativo? Medo da folha em branco? 3 passos para destravar.</p>
+                        <a href="blog/dificuldade-em-redacao-o-que-fazer.html" class="text-purple font-bold text-sm hover:underline">Ler Artigo →</a>
                     </div>
                 </article>
 
-                <!-- Article 9 -->
-                <article class="blog-card group bg-white rounded-3xl overflow-hidden shadow-lg border-2 border-purple-100 hover:border-purple card-hover cursor-pointer" data-category="enem">
-                    <div class="relative h-56 bg-gradient-to-br from-purple-100 to-purple-200 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=600&q=80" 
-                             alt="Interpretação ENEM" 
-                             class="w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute top-4 left-4">
-                            <span class="px-4 py-2 bg-white rounded-full text-purple font-bold text-sm shadow-lg">
-                                🎯 ENEM
-                            </span>
+                <article class="blog-card group bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:border-purple hover:shadow-2xl transition-all duration-300" data-category="redacao">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80" alt="Nota Baixa" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple line-clamp-2">Nota Baixa em Redação: Causas e Soluções</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Diagnóstico rápido: foi fuga ao tema ou gramática? Saiba como recuperar.</p>
+                        <a href="blog/nota-baixa-em-redacao-causas-e-solucoes.html" class="text-purple font-bold text-sm hover:underline">Ler Artigo →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card group bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:border-purple hover:shadow-2xl transition-all duration-300" data-category="portugues">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&q=80" alt="Reforço Escolar" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4"><span class="px-3 py-1 bg-green-500 text-white text-xs font-bold rounded-full">Sinais de Alerta</span></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple line-clamp-2">Reforço Escolar em Português: 5 Sinais de que Precisa</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Notas vermelhas não são o único sinal. Veja quando agir para evitar a reprovação.</p>
+                        <a href="blog/reforco-escolar-portugues-quando-precisa.html" class="text-purple font-bold text-sm hover:underline">Ler Artigo →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card group bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:border-purple hover:shadow-2xl transition-all duration-300" data-category="portugues">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=600&q=80" alt="Interpretação" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple line-clamp-2">Dificuldade em Interpretação de Texto: Como Resolver</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">O maior vilão das provas. Aprenda a técnica da leitura ativa e pare de errar.</p>
+                        <a href="blog/dificuldade-interpretacao-de-texto-como-resolver.html" class="text-purple font-bold text-sm hover:underline">Ler Artigo →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card group bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:border-purple hover:shadow-2xl transition-all duration-300" data-category="portugues">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="absolute inset-0 bg-purple-50 flex items-center justify-center">
+                            <span class="text-4xl">🤔</span>
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple transition-colors">
-                            Interpretação de Texto no ENEM: Técnicas Para Não Errar
-                        </h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">
-                            Métodos práticos e estratégias comprovadas para dominar interpretação de textos nas questões do ENEM.
-                        </p>
-                        <div class="flex items-center justify-between text-sm text-gray-500">
-                            <div class="flex items-center space-x-2">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                                <span>11 min de leitura</span>
-                            </div>
-                            <svg class="w-5 h-5 text-purple group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                            </svg>
-                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple line-clamp-2">Dificuldade em Português Escolar é Normal?</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Entenda o "choque da sintaxe" na transição para o Fundamental 2 e as lacunas da alfabetização.</p>
+                        <a href="blog/dificuldade-em-portugues-escolar-e-normal.html" class="text-purple font-bold text-sm hover:underline">Ler Artigo →</a>
                     </div>
                 </article>
+
+                <article class="blog-card group bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:border-purple hover:shadow-2xl transition-all duration-300" data-category="portugues">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?w=600&q=80" alt="Pais ajudando" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4"><span class="px-3 py-1 bg-yellow text-gray-900 text-xs font-bold rounded-full">Para Pais</span></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple line-clamp-2">Guia: Como Ajudar seu Filho em Português em Casa</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Você não precisa ser professor. Dicas simples para apoiar o estudo sem estresse.</p>
+                        <a href="blog/como-ajudar-meu-filho-em-portugues.html" class="text-purple font-bold text-sm hover:underline">Ler Artigo →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card group bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:border-purple hover:shadow-2xl transition-all duration-300" data-category="ingles">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&q=80" alt="Inglês Online" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple line-clamp-2">Aulas de Inglês Online Funcionam para Jovens?</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Para a geração digital, a tela é aliada. Veja as vantagens sobre cursos tradicionais.</p>
+                        <a href="blog/aulas-de-ingles-online-funcionam.html" class="text-purple font-bold text-sm hover:underline">Ler Artigo →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card group bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:border-purple hover:shadow-2xl transition-all duration-300" data-category="ingles">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="absolute inset-0 bg-blue-100 flex items-center justify-center">
+                            <span class="text-4xl">🚫📚</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple line-clamp-2">Inglês para Estudantes: Sem Decorar Regras</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Esqueça a tabela de verbos. Aprenda com contexto, séries e games.</p>
+                        <a href="blog/ingles-para-estudantes-sem-decorar.html" class="text-purple font-bold text-sm hover:underline">Ler Artigo →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card group bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:border-purple hover:shadow-2xl transition-all duration-300" data-category="ingles">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="Bloqueio Inglês" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple line-clamp-2">Meu Filho Tem Dificuldade em Inglês: O Que Fazer?</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Timidez? Falta de base? Identifique a causa do bloqueio e como destravar.</p>
+                        <a href="blog/dificuldade-em-ingles-o-que-fazer.html" class="text-purple font-bold text-sm hover:underline">Ler Artigo →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card group bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:border-purple hover:shadow-2xl transition-all duration-300" data-category="dicas">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="absolute inset-0 bg-purple-gradient flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">MÉTODO REVISÃO</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple line-clamp-2">Por Dentro do Ensino Personalizado na Prática</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Conheça nossa metodologia humanizada, diagnóstica e focada em resultados.</p>
+                        <a href="blog/metodo-revisao-ensino-personalizado.html" class="text-purple font-bold text-sm hover:underline">Ler Artigo →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card group bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:border-purple hover:shadow-2xl transition-all duration-300" data-category="dicas">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="absolute inset-0 bg-gray-50 flex items-center justify-center p-4 text-center">
+                            <span class="text-gray-700 font-bold">Particular<br>VS<br>Cursinho</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple line-clamp-2">Aulas Personalizadas ou Cursinho: Qual o Melhor?</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">O duelo: ensino de massa vs atenção individual. Qual perfil do seu filho?</p>
+                        <a href="blog/aulas-personalizadas-vs-cursinho.html" class="text-purple font-bold text-sm hover:underline">Ler Artigo →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card group bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:border-purple hover:shadow-2xl transition-all duration-300" data-category="dicas">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="absolute inset-0 bg-yellow-50 flex items-center justify-center">
+                            <span class="text-4xl">📅</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple line-clamp-2">Quantas Aulas de Reforço por Semana são Necessárias?</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">1x, 2x ou 3x? Entenda a frequência ideal para manutenção ou recuperação.</p>
+                        <a href="blog/quantas-aulas-por-semana-para-melhorar-notas.html" class="text-purple font-bold text-sm hover:underline">Ler Artigo →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card group bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:border-purple hover:shadow-2xl transition-all duration-300" data-category="dicas">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?w=600&q=80" alt="Planejamento" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple line-clamp-2">Professora Particular Online: Quando Procurar?</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Não espere o boletim vermelho. Saiba o momento certo de agir preventivamente.</p>
+                        <a href="blog/professora-particular-online-quando-procurar.html" class="text-purple font-bold text-sm hover:underline">Ler Artigo →</a>
+                    </div>
+                </article>
+
             </div>
 
-            <!-- No Results Message -->
             <div id="noResults" class="hidden text-center py-16">
-                <svg class="w-20 h-20 text-purple mx-auto mb-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
+                <span class="text-4xl block mb-2">🔍</span>
                 <h3 class="text-2xl font-bold text-gray-900 mb-2">Nenhum artigo encontrado</h3>
-                <p class="text-gray-600">Tente buscar por outros termos ou categorias</p>
+                <p class="text-gray-600">Tente buscar por termos como "redação", "inglês" ou "dificuldade".</p>
             </div>
 
-            <!-- Newsletter CTA -->
             <div class="mt-20 relative overflow-hidden bg-purple-gradient rounded-3xl p-12 text-center shadow-2xl">
                 <div class="absolute inset-0 opacity-10">
                     <div class="absolute top-0 left-0 w-72 h-72 bg-yellow rounded-full filter blur-3xl"></div>
@@ -1201,28 +1125,20 @@
                 </div>
                 <div class="relative z-10">
                     <span class="text-5xl mb-4 block">📧</span>
-                    <h3 class="text-3xl font-black text-white mb-4 font-display">Receba Conteúdo Exclusivo</h3>
+                    <h3 class="text-3xl font-black text-white mb-4 font-display">Receba Dicas Exclusivas</h3>
                     <p class="text-purple-100 mb-8 text-lg max-w-2xl mx-auto">
-                        Cadastre-se e receba dicas semanais para ajudar seu filho em português direto no seu email
+                        Junte-se a outros pais e receba semanalmente conteúdos para ajudar seu filho a estudar melhor.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                        <input
-                            type="email"
-                            placeholder="Seu melhor email"
-                            class="flex-1 px-6 py-4 rounded-xl text-gray-900 focus:outline-none focus:ring-4 focus:ring-yellow"
-                        />
+                        <input type="email" placeholder="Seu melhor email" class="flex-1 px-6 py-4 rounded-xl text-gray-900 focus:outline-none focus:ring-4 focus:ring-yellow">
                         <button class="px-8 py-4 bg-yellow-gradient text-gray-900 font-bold rounded-xl transition-all duration-200 whitespace-nowrap hover:shadow-2xl transform hover:scale-105">
                             Quero Receber 🚀
                         </button>
                     </div>
-                    <p class="text-xs text-purple-100 mt-4">
-                        🔒 Seus dados estão seguros. Sem spam, prometemos!
-                    </p>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Para Pais Section -->
     <section id="pais" class="py-24 bg-gradient-to-b from-purple-50 to-white reveal">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
