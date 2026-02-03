@@ -1,297 +1,219 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XRFJQDCG9M"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <title>Método Revisão | Aulas de Redação Online (ENEM), Reforço em Português e Aulas de Inglês</title>
+  <meta name="description" content="Aulas online de redação para ENEM e vestibulares, reforço escolar em português do 6º ano ao Ensino Médio e aulas de inglês. Método Revisão com Beatriz Dias. Agende uma aula experimental gratuita!" />
 
-  gtag('config', 'G-XRFJQDCG9M');
-</script>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Método Revisão | Aulas de Português e Inglês Online com Beatriz Dias | Reforço Escolar</title>
-    <meta name="description" content="Aulas particulares de português e inglês online com a professora Beatriz Dias. Reforço escolar personalizado do 6º ano ao Ensino Médio. Método criado por Beatriz em 2022. Agende sua aula experimental gratuita!">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-        }
-        .font-display {
-            font-family: 'Playfair Display', serif;
-        }
-        
-        /* Custom Colors - Purple & Yellow */
-        :root {
-            --purple-light: #a78bfa;
-            --purple-medium: #8b5cf6;
-            --purple-dark: #6d28d9;
-            --yellow-light: #fbbf24;
-            --yellow-medium: #f59e0b;
-            --yellow-dark: #d97706;
-        }
-        
-        .bg-purple-gradient {
-            background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
-        }
-        
-        .bg-yellow-gradient {
-            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-        }
-        
-        .text-purple {
-            color: #8b5cf6;
-        }
-        
-        .text-yellow {
-            color: #fbbf24;
-        }
-        
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-20px);
-            }
-        }
-        
-        @keyframes pulse-glow {
-            0%, 100% {
-                box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
-            }
-            50% {
-                box-shadow: 0 0 40px rgba(139, 92, 246, 0.6);
-            }
-        }
-        
-        .animate-fadeInUp {
-            animation: fadeInUp 0.8s ease-out;
-        }
-        
-        .animate-float {
-            animation: float 3s ease-in-out infinite;
-        }
-        
-        .animate-pulse-glow {
-            animation: pulse-glow 2s ease-in-out infinite;
-        }
-        
-        /* Hero Pattern */
-        .hero-pattern {
-            background-image: 
-                radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(251, 191, 36, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 40% 20%, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
-        }
-        
-        /* Blob Background */
-        .blob {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(40px);
-            opacity: 0.5;
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        .blob-purple {
-            background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%);
-        }
-        
-        .blob-yellow {
-            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-        }
-        
-        /* Card Hover Effect */
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(139, 92, 246, 0.2);
-        }
-        
-        /* Glassmorphism */
-        .glass {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        /* Image Overlay Effect */
-        .image-overlay {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .image-overlay::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(139, 92, 246, 0.3) 0%, rgba(251, 191, 36, 0.3) 100%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .image-overlay:hover::after {
-            opacity: 1;
-        }
-        
-        /* Scroll Reveal */
-        .reveal {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.6s ease;
-        }
-        
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 6rem; 
-        }
-
-        :focus-visible {
-            outline: 2px solid #8b5cf6;
-            outline-offset: 2px;
-        }
-
-        @keyframes pulse-ring {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
-            70% { transform: scale(1); box-shadow: 0 0 0 15px rgba(34, 197, 94, 0); }
-            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
-        }
-        
-        .animate-pulse-ring {
-            animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
-    </style>
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        purple: {
-                            light: '#a78bfa',
-                            DEFAULT: '#8b5cf6',
-                            dark: '#6d28d9',
-                        },
-                        yellow: {
-                            light: '#fbbf24',
-                            DEFAULT: '#f59e0b',
-                            dark: '#d97706',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-
-    
-    <!-- SEO Adicional -->
-    <meta name="keywords" content="aulas de português online, aulas de inglês online, reforço escolar, professora particular Beatriz Dias, ensino personalizado, Método Revisão">
-    <meta name="author" content="Beatriz Dias - Criadora do Método Revisão">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.metodorevisao.com/">
-    
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Método Revisão | Aulas com Beatriz Dias">
-    <meta property="og:description" content="Aulas particulares online com metodologia criada por Beatriz Dias desde 2022.">
-    <meta property="og:url" content="https://www.metodorevisao.com/">
-    <meta property="og:image" content="https://www.metodorevisao.com/og-image.jpg">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Método Revisão | Beatriz Dias">
-    <meta name="twitter:description" content="Aulas de português e inglês online com metodologia própria.">
-    
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-T6M6WQRX');</script>
-<!-- End Google Tag Manager -->
-    
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1232493168973691');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1232493168973691&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-    
-<!-- ✅ SEO Fixes + Indexação (não altera layout) -->
-<meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
-<meta name="theme-color" content="#8b5cf6">
-
-<!-- ✅ Canonical correto do domínio atual (mantém o antigo também, mas este ajuda) -->
-<link rel="canonical" href="https://metodorevisao.com/">
-
-<!-- ✅ Open Graph correto do domínio atual (mantém o antigo também) -->
-<meta property="og:url" content="https://metodorevisao.com/">
-
-<!-- ✅ Twitter URL (opcional, mas ajuda) -->
-<meta name="twitter:url" content="https://metodorevisao.com/">
-
-<!-- ✅ Preconnect extra (melhora performance de fontes) -->
-<link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
-
-<!-- ✅ Favicons -->
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
-
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-
-<meta name="theme-color" content="#8b5cf6">
+  <meta name="robots" content="index,follow" />
+  <meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <meta name="author" content="Beatriz Dias - Método Revisão" />
 
 
-    
+  <link rel="canonical" href="https://metodorevisao.com/" />
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin />
+
+ 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" />
+
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+
+  <meta name="theme-color" content="#8b5cf6" />
+
+ 
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+  <!-- ✅ Open Graph (melhorar share e CTR) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Método Revisão" />
+  <meta property="og:title" content="Método Revisão | Redação ENEM, Português e Inglês Online" />
+  <meta property="og:description" content="Aulas online com método personalizado: redação ENEM e vestibulares, reforço escolar em português e aulas de inglês. Aula experimental gratuita." />
+  <meta property="og:url" content="https://metodorevisao.com/" />
+  <!-- Dica: crie uma imagem OG real (1200x630). Enquanto não tiver, use uma existente -->
+  <meta property="og:image" content="https://metodorevisao.com/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- ✅ Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Método Revisão | Redação ENEM, Português e Inglês" />
+  <meta name="twitter:description" content="Aulas online com método personalizado. Aula experimental gratuita." />
+  <meta name="twitter:url" content="https://metodorevisao.com/" />
+  <meta name="twitter:image" content="https://metodorevisao.com/og-image.jpg" />
+
+  <!-- ✅ SEO (keywords não é essencial, mas ok manter leve) -->
+  <meta name="keywords" content="aulas de redação online enem, redação enem, aulas de português online, reforço escolar português, aulas de inglês online, professora particular online" />
+
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            purple: { light: '#a78bfa', DEFAULT: '#8b5cf6', dark: '#6d28d9' },
+            yellow: { light: '#fbbf24', DEFAULT: '#f59e0b', dark: '#d97706' }
+          }
+        }
+      }
+    }
+  </script>
+
+
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    .font-display { font-family: 'Playfair Display', serif; }
+    :root {
+      --purple-light: #a78bfa;
+      --purple-medium: #8b5cf6;
+      --purple-dark: #6d28d9;
+      --yellow-light: #fbbf24;
+      --yellow-medium: #f59e0b;
+      --yellow-dark: #d97706;
+    }
+    .bg-purple-gradient { background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%); }
+    .bg-yellow-gradient { background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); }
+    .text-purple { color: #8b5cf6; }
+    .text-yellow { color: #fbbf24; }
+    @keyframes fadeInUp { from { opacity:0; transform:translateY(30px);} to { opacity:1; transform:translateY(0);} }
+    @keyframes float { 0%,100% { transform:translateY(0);} 50% { transform:translateY(-20px);} }
+    @keyframes pulse-glow { 0%,100% { box-shadow:0 0 20px rgba(139,92,246,.4);} 50% { box-shadow:0 0 40px rgba(139,92,246,.6);} }
+    .animate-fadeInUp { animation: fadeInUp .8s ease-out; }
+    .animate-float { animation: float 3s ease-in-out infinite; }
+    .animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+    .hero-pattern {
+      background-image:
+        radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(251, 191, 36, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
+    }
+    .blob { position:absolute; border-radius:50%; filter:blur(40px); opacity:.5; animation: float 6s ease-in-out infinite; }
+    .blob-purple { background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%); }
+    .blob-yellow { background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); }
+    .card-hover { transition: all .3s ease; }
+    .card-hover:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(139,92,246,.2); }
+    .glass { background: rgba(255,255,255,.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,.2); }
+    .image-overlay { position: relative; overflow: hidden; }
+    .image-overlay::after { content:''; position:absolute; inset:0; background: linear-gradient(135deg, rgba(139,92,246,.3) 0%, rgba(251,191,36,.3) 100%); opacity:0; transition: opacity .3s ease; }
+    .image-overlay:hover::after { opacity:1; }
+    .reveal { opacity:0; transform: translateY(50px); transition: all .6s ease; }
+    .reveal.active { opacity:1; transform: translateY(0); }
+    html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+    :focus-visible { outline: 2px solid #8b5cf6; outline-offset: 2px; }
+    @keyframes pulse-ring {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34,197,94,.7); }
+      70% { transform: scale(1); box-shadow: 0 0 0 15px rgba(34,197,94,0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34,197,94,0); }
+    }
+    .animate-pulse-ring { animation: pulse-ring 2s cubic-bezier(.4,0,.6,1) infinite; }
+
+    /* ✅ Garante sr-only (caso Tailwind falhe em algum cenário) */
+    .sr-only {
+      position:absolute!important; width:1px!important; height:1px!important;
+      padding:0!important; margin:-1px!important; overflow:hidden!important;
+      clip:rect(0,0,0,0)!important; white-space:nowrap!important; border:0!important;
+    }
+  </style>
+
+  <!-- ✅ Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[];
+      w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T6M6WQRX');
+  </script>
+
+  <!-- ✅ Google Analytics (apenas 1, o correto) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XRFJQDCG9M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XRFJQDCG9M');
+  </script>
+
+  <!-- ✅ Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s){
+      if(f.fbq)return; n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n; n.push=n; n.loaded=!0; n.version='2.0'; n.queue=[];
+      t=b.createElement(e); t.async=!0; t.src=v; s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)
+    }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1232493168973691');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none" alt=""
+      src="https://www.facebook.com/tr?id=1232493168973691&ev=PageView&noscript=1" />
+  </noscript>
+
+  <!-- ✅ Structured Data (SEO forte) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebSite",
+        "@id":"https://metodorevisao.com/#website",
+        "url":"https://metodorevisao.com/",
+        "name":"Método Revisão",
+        "inLanguage":"pt-BR",
+        "potentialAction":{
+          "@type":"SearchAction",
+          "target":"https://metodorevisao.com/blog/?q={search_term_string}",
+          "query-input":"required name=search_term_string"
+        }
+      },
+      {
+        "@type":"Organization",
+        "@id":"https://metodorevisao.com/#organization",
+        "name":"Método Revisão",
+        "url":"https://metodorevisao.com/",
+        "logo":{
+          "@type":"ImageObject",
+          "url":"https://metodorevisao.com/favicon-192x192.png"
+        }
+      },
+      {
+        "@type":"Person",
+        "@id":"https://metodorevisao.com/#beatriz",
+        "name":"Beatriz Dias",
+        "jobTitle":"Professora de Português, Redação e Inglês",
+        "url":"https://metodorevisao.com/",
+        "worksFor":{"@id":"https://metodorevisao.com/#organization"}
+      },
+      {
+        "@type":"WebPage",
+        "@id":"https://metodorevisao.com/#homepage",
+        "url":"https://metodorevisao.com/",
+        "name":"Método Revisão | Aulas Online",
+        "isPartOf":{"@id":"https://metodorevisao.com/#website"},
+        "about":[{"@id":"https://metodorevisao.com/#organization"},{"@id":"https://metodorevisao.com/#beatriz"}],
+        "primaryImageOfPage":{"@type":"ImageObject","url":"https://metodorevisao.com/og-image.jpg"},
+        "inLanguage":"pt-BR"
+      }
+    ]
+  }
+  </script>
 </head>
+
 
     <!-- ✅ Structured Data (Schema.org) -->
 <script type="application/ld+json">
